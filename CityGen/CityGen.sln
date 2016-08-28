@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityGen", "CityGen\CityGen.csproj", "{8F280774-F27C-4588-8332-140B61D964A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityGen.Console", "CityGen.Console\CityGen.Console.csproj", "{05A4EDB3-47E2-4317-9523-5A3FAF9B75C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F280774-F27C-4588-8332-140B61D964A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F280774-F27C-4588-8332-140B61D964A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F280774-F27C-4588-8332-140B61D964A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F280774-F27C-4588-8332-140B61D964A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05A4EDB3-47E2-4317-9523-5A3FAF9B75C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A4EDB3-47E2-4317-9523-5A3FAF9B75C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A4EDB3-47E2-4317-9523-5A3FAF9B75C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A4EDB3-47E2-4317-9523-5A3FAF9B75C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

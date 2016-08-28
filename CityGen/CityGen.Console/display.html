@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="person.js"></script>
+</head>
+<body>
+    <canvas id="c" width="1000" height="1000" style="border: 1px solid red"></canvas>
+
+    <script>
+        var canvas = document.getElementById("c");
+        var ctx = canvas.getContext("2d");
+
+        //ctx.fillStyle = "rgb(200,0,0)";
+        var i = 0;
+        var j = 0;
+        ctx.strokeStyle = "blue";
+        setInterval(function()
+        {
+            
+
+            if (j >= segments[i].length) {
+                if (segments.length - 1 == i) return;
+
+                console.debug("Step " + i + " ends.");
+                ++i;
+                
+                if (segments[i - 1].length == segments[i].length) return;
+
+                //j = Math.min(segments[i - 1].length, segments[i].length);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.strokeStyle = "red";
+                for(var k = 0; k < segments[i-1].length; ++k)
+                {
+                    var s = segments[i][k];
+
+                    ctx.beginPath();
+                    ctx.moveTo(s.Start.X + (canvas.width / 2), s.Start.Y + (canvas.height / 2));
+                    ctx.lineTo(s.End.X + (canvas.width / 2), s.End.Y + (canvas.height / 2));
+                    ctx.closePath();
+                    ctx.stroke();
+                }
+                ctx.strokeStyle = "blue";
+            }
+            
+            var s = segments[i][j];
+
+            ctx.beginPath();
+            ctx.moveTo(s.Start.X + (canvas.width / 2), s.Start.Y + (canvas.height / 2));
+            ctx.lineTo(s.End.X + (canvas.width / 2), s.End.Y + (canvas.height / 2));
+            ctx.closePath();
+            ctx.stroke();
+
+            console.debug("Drawing line " + s.Start.X + "/" + s.Start.Y + " to " + s.End.X + "/" + s.End.Y);
+
+            ++j;
+            
+        }, 100)
+
+        /*for(var i = 0; i < segments.length;++i)
+        {
+            var s = segments[i];
+
+            ctx.beginPath();
+            ctx.moveTo(s.Start.X + (canvas.width / 2), s.Start.Y + (canvas.height / 2));
+            ctx.lineTo(s.End.X + (canvas.width / 2), s.End.Y + (canvas.height / 2));
+            ctx.closePath();
+            ctx.stroke();
+        }*/
+    </script>
+</body>
+</html>
